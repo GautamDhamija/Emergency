@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,500);
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+body{
+    font-size:10px;
+    margin: 0;
+    padding: 0;
+}
+.header{
+    background-image: url("img.jpg");
+    height:100vh;
+    width: 100%;
+    background-size: 100vw 100vh ;
+    background-repeat: no-repeat;
+
+}
+.navback{
+    background-color: black;
+    width: 100vw;
+    height: 5rem;
+    opacity: 0.4;
+    position: relative;
+}
+
+.nav{
+    list-style: none;
+    font: 300 16px/1.2 Lato;
+    padding:25px;
+    float: right;
+    /* background-color: black; */
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(0, -65%);
+}
+.nav li{
+    float:left;
+}
+.nav li a{
+    display:block;
+    padding: 12px 18px;
+    text-decoration: none;
+    color: #999;
+    /* border-bottom:1px solid #eee; */
+    transition:all ease .5s;
+}
+.nav li:hover a{
+    opacity: 1 ;
+    color: #red;
+    border-color:#E74C3C;
+}
+/* flexbox */
+
+.downbox{
+    position:absolute;
+    top:27rem;
+    right:15rem;
+    display: flex;
+    justify-content: center;
+    background-color: DodgerBlue;
+    opacity: 0.7;
+    width: 70rem;
+    height: 20rem;
+}
+.downbox > div{
+    /* background-color: #f1f1f1; */
+    width: 50%;
+    margin: 10px;
+    /* text-align: center;
+    line-height: 75px;
+    font-size: 30px; */
+}
+
+.downbox .smallp{
+    color:white;
+    margin: 20px;
+    font-size: 16px;
+}
+.downbox .largep{
+    /* padding: 50px; */
+    margin:30px 20px;
+    font-size: 25px;
+}
+
+/* form */
+.myForm {
+        display: grid;
+        grid-template-columns: auto 1fr 1fr;
+        grid-auto-flow: row dense;	
+        grid-gap: .8em;
+        /* background: #eee; */
+        padding: 1.2em;
+    }
+    .myForm > label  {
+        grid-column: 1;
+        grid-row: auto;
+    }
+    .myForm > input,
+    .myForm > button {
+        grid-column: 2;
+        grid-row: auto;
+        padding: 1em;
+        border: none;
+    }
+    .myForm textarea {
+    min-height: calc(100% - 2em);	
+    width: 100%;
+    border: none;
+    }
+    #comment-box {
+    grid-column: 3;
+    grid-row: span 3;
+    }
+    .myForm > button {
+    grid-column: 2 / 4; 
+    background-color: white;
+    }
